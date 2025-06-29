@@ -28,36 +28,26 @@ const {title, description} = Astro.props;
     <!-- Nombre del autor del sitio -->
     <meta name="author" content="Juan Palma" />
 
-    <!-- OPEN GRAPH -->
-    <meta property="og:url" content="https://porfolio-dev-jpalma76.netlify.app/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Porfolio web de Juan Palma" />
-    <meta
-      property="og:description"
-      content="Porfolio web profesional de Juan Palma @jpalma76."
-    />
-    <meta property="og:image" content="/image/og.jpg" />
-    <meta property="og:locale" content="es_ES" />
+    <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://porfolio-dev-jpalma76.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Porfolio web de Juan Palma">
+  <meta property="og:description" content="Porfolio web profesional de Juan Palma @jpalma76.">
+  <meta property="og:image" content="https://porfolio-dev-jpalma76.netlify.app/image/og.jpg">
+  <meta property="og:locale" content="es_ES" />
 
-    <!-- TWITTER CARD -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta
-      name="twitter:url"
-      content="https://porfolio-dev-jpalma76.netlify.app/"
-    />
-    <meta name="twitter:type" content="website" />
-    <meta name="twitter:image" content="/image/og.png" />
-    <meta
-      name="twitter:site"
-      content="https://porfolio-dev-jpalma76.netlify.app/"
-    />
-    <meta name="twitter:creator" content="@jpalma76" />
-    <meta name="twitter:title" content="Profolio web de Jun Palma" />
-    <meta
-      name="twitter:description"
-      content="Porfolio web profesional de Juan Palma @jpalma76."
-    />
-  </head>
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="porfolio-dev-jpalma76.netlify.app">
+  <meta property="twitter:url" content="https://porfolio-dev-jpalma76.netlify.app/">
+  <meta name="twitter:title" content="Porfolio web de Juan Palma">
+  <meta name="twitter:description" content="Porfolio web profesional de Juan Palma @jpalma76.">
+  <meta name="twitter:image" content="https://porfolio-dev-jpalma76.netlify.app/image/og.jpg">
+  <meta name="twitter:creator" content="@jpalma76" />
+  <meta name="twitter:type" content="website" />
+  <meta name="twitter:site" content="https://porfolio-dev-jpalma76.netlify.app/" />
+
+</head>
   <body>
     <slot />
   </body>
