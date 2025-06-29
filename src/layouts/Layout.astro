@@ -1,0 +1,94 @@
+---
+import "@fontsource/ibm-plex-mono";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const {title, description} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta name="description" content={description} />
+    <meta
+      name="google-site-verification"
+      content="VgvIFEHXcxoIB3m5ruc9a3p1oeUs6d8ICa8u2zZ2ARg"
+    />
+    <meta
+      name="keywords"
+      content="Frontend, Desarrollador Web, Astro, React, Tailwind, Portafolio, Juan Palma"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/avatar.svg" />
+    <!-- Nombre del autor del sitio -->
+    <meta name="author" content="Juan Palma" />
+
+    <meta
+      property="og:url"
+      content="https://porfolio-version-azul.netlify.app"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Porfolio web de Juan Palma" />
+    <meta
+      property="og:description"
+      content="Soy Juan Palma, Desarrollador Frontend con experiencia en Astro, React, Tailwind y Vite. Mira mis proyectos y contáctame para colaborar."
+    />
+    <meta property="og:image" content="/og.jpg" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://porfolio-version-azul.netlify.app/"
+    />
+    <meta name="twitter:type" content="website" />
+    <meta
+      name="twitter:site"
+      content="https://porfolio-version-azul.netlify.app/"
+    />
+    <meta name="twitter:creator" content="@jpalma76" />
+    <meta name="twitter:title" content="Profolio web de Jun Palma" />
+    <meta
+      name="twitter:description"
+      content="Soy Juan Palma, Desarrollador Frontend con experiencia en Astro, React, Tailwind y Vite. Mira mis proyectos y contáctame para colaborar."
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --bg-dark: #050502;
+    --font-dark: white;
+    --bg-light: #ddd;
+    --font-light: #000;
+    --title: #aaa;
+    --subtitle: #bbb;
+    --description: #ccc;
+    --hover: #f1d34e;
+  }
+
+  html {
+    font-family:
+      "IBM Plex Mono", "Courier New", Courier, monospace, system-ui, sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-dark);
+    color: var(--font-dark);
+  }
+  img {
+    aspect-ratio: auto;
+  }
+</style>

@@ -1,0 +1,38 @@
+---
+interface Props {
+    title: string;
+    date: string;
+    description: string;
+    link: string;
+    repo: string;
+    url: string;
+}
+
+const { title, date, description, link, repo, url } = Astro.props;
+---
+
+<div class="card w-[255px] h-[330px] flex flex-col items-center border rounded-md px-5 py-3 transition-all gap-5">
+    <h3 class="mx-auto h-16 flex items-center text-center text-yellow-300/90">{title}</h3>
+    <a 
+        href={link}
+        target="_blank"
+        class="w-full hover:scale-125 hover:opacity-40"
+    >
+
+        <div class="w-full h-[100px] flex flex-col justify-center gap-y-5 text-center">
+            <img class="w-[80%] h-auto border rounded-md mx-auto p-0 object-fit" src={url} alt={title}>
+        </div>
+    </a>
+    <span class="text-sm text-center">{description}</span>
+</div>
+
+<style>
+    @media (max-width:600px) {
+        .card {
+            width:350px;
+            height: auto;
+            margin: 0 auto;
+            transition: .3s;
+        }
+    }
+</style>

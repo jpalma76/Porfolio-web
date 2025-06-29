@@ -1,0 +1,86 @@
+---
+import Section from "./Section.astro";
+import CodeIcon from "./icons/CodeIcon.astro";
+import SkillItem from "./SkillItem.astro";
+
+const skills_programmer = [
+  {
+    name: "HTML",
+    url: "./assets/html.webp"
+  },
+  {
+    name: "CSS",
+    url: "./assets/css.webp"
+  },
+  {
+    name: "JAVASCRIPT",
+    url: "./assets/javascript.webp"
+  },
+  {
+    name: "JQUERY",
+    url: "./assets/jquery.webp"
+  },
+  {
+    name: "REACTJS",
+    url: "./assets/react.webp"
+  },
+  {
+    name: "ASTRO",
+    url: "./assets/astro.webp"
+  },
+  {
+    name: "TAILWIND",
+    url: "./assets/tailwind.webp"
+  },
+  {
+    name: "BOOTSTRAP",
+    url: "./assets/bootstrap.webp"
+  },
+  {
+    name: "JSON",
+    url: "./assets/json.webp"
+  },
+  {
+    name: "SQL",
+    url: "./assets/sql.webp"
+  },
+  {
+    name: "MYSQL",
+    url: "./assets/mysql.webp"
+  },
+  {
+    name: "SQLITE",
+    url: "./assets/sqlite.webp"
+  },
+  {
+    name: "GIT",
+    url: "./assets/git.webp"
+  },
+  {
+    name: "GITHUB",
+    url: "./assets/github.webp"
+  },
+];
+
+---
+
+<Section id="skills">
+  <h2 class="w-full flex items-center flex-row gap-x-2 text-3xl">
+    <CodeIcon class="size-8" />
+    Mis Skills son:
+  </h2>
+  <h3 class="text-2xl font-semibold">Desarrollo web</h3>
+  <article
+    class="flex flex-col text-center text-gray-600 max-w-[700px] mx-auto mt-7"
+  >
+    <ol
+      class="font-bold grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-6 text-center mb-5"
+    >
+      {
+        skills_programmer.map(skill => (
+            <SkillItem name={skill.name} url={skill.url} />
+        ))
+      }
+    </ol>
+  </article>
+</Section>
