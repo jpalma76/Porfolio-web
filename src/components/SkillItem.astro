@@ -9,17 +9,17 @@ const filename = `icono de ${name}`
 ---
 
 <li
-    class="badge w-[170px] flex items-center justify-center px-auto py-1 border-zinc-400 rounded-full text-sm"
+    class="badge w-[150px] flex items-center justify-center gap-3 px-auto py-1 border-zinc-400 rounded-full"
 >
-    <img src={url} alt={filename} class="w-4 h-auto aspect-auto p-0 object-fit" />
-    {name}
+    <img src={url} alt={filename} class="w-6 h-auto p-0 object-contain" />
+    <span class="text-sm font-semibold">{name}</span>
 </li>
 
 <style>
     .badge {
         display: flex;
         color: #fff;
-        background-image: linear-gradient(45deg, silver 30%, #111 80%);
+        background-image: linear-gradient(45deg, #111 10%, silver 80%);
         border: 1px solid #efe060;
         font-size: 14px;
         font-weight: 500;
