@@ -13,7 +13,7 @@ interface Props {
 const { title, date, description, link, repo, url } = Astro.props;
 ---
 
-<div class="card w-[270px] max-sm:w-[90%] h-[340px] flex flex-col items-center justify-start border rounded-md transition-all">
+<div class="card w-full md:w-[270px] max-sm:w-[90%] h-[360px] md:h-[340px] flex flex-col items-center justify-start border rounded-md transition-all">
     
     <h3 class="mx-auto h-[70px] flex items-center justify-center text-center text-base text-balance uppercase semibold">{title}</h3>
     
@@ -22,7 +22,7 @@ const { title, date, description, link, repo, url } = Astro.props;
         target="_blank"
         class="hover:scale-105 hover:opacity-40"
     >
-        <img class="w-[95%] h-[130px] border rounded-md !mx-auto" src={url} alt={title}>
+        <img class="w-[95%] md:w-[254px] h-auto md:h-[135px] border rounded-md !mx-auto" src={url} alt={title}>
     </a>
     <p class="w-[90%] flex h-[90px] justify-center items-center text-xs text-center">{description}</p>
     <a
@@ -30,7 +30,7 @@ const { title, date, description, link, repo, url } = Astro.props;
         href={repo}
         target="_blank"
     >
-        <div class="flex justify-center items-center gap-x-3">
+        <div class="flex justify-center items-center gap-x-3 !my-3">
             <GitHubProfile class="size-6" />
             <span> Ver repositorio</span>
         </div>
