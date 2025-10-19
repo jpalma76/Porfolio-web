@@ -64,8 +64,8 @@ const skills_programmer = [
   </h2>
   <h3 class="text-2xl font-semibold !my-5">Desarrollo web</h3>
   
-  <article class="flex flex-col text-center max-w-[900px] mx-auto !my-7">
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-6 text-center">
+  <article class="flex flex-col text-center w-full md:max-w-[900px] mx-auto !my-7">
+    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-col-4 gap-x-10 gap-y-6 text-center">
       {
         skills_programmer.map(skill => (
             <SkillItem name={skill.name} url={skill.url} />
