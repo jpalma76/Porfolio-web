@@ -12,9 +12,9 @@ https://www.youtube.com/watch?v=HEMvsJTBweY&t=2269s
 
 para descargar el proyecto y comenzar a modificarlo y ver como funciona Astro, sigue los siguientes pasos:
 ### Descarga el proyecto
-1.- git clone https://github.com/jpalma76/porfolio-version-azul
+1.- git clone https://github.com/jpalma76/Porfolio-web
 ### Ingresa a la carpeta del proyecto
-2.- cd porfolio-version-azul
+2.- cd Porfolio-web
 ### Instala las dependencias
 3.- pnpm install
 ### para abrirlo con vscode
@@ -22,8 +22,5 @@ para descargar el proyecto y comenzar a modificarlo y ver como funciona Astro, s
 # o puedes utilizar el editor de código de tu preferencia
 ### para correr el programa
 5.- pnpm run dev
-
-vista de Informe de accesibilidad de Google.
-![Captura desde 2024-07-16 16-27-32](https://github.com/user-attachments/assets/220b14e2-2d42-4f5e-9291-75304cb839e3)
 
 Gracias por vistar mi repositorio.

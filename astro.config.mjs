@@ -1,8 +1,22 @@
+// @ts-check
 import { defineConfig } from 'astro/config';
 
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from '@tailwindcss/vite';
+
+import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()]
+   output: 'server',
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
+  build: {
+    inlineStylesheets: 'always',
+  },
+
+  adapter: netlify(),
+  site: 'https://la-desvelada-v-sitio-no-oficial.netlify.app/'
 });

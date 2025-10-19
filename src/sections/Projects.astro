@@ -1,7 +1,8 @@
 ---
 import Section from "../components/Section.astro";
-import ProjectIcon from "./ProjectIcon.astro";
-import ProjectItem from "./ProjectItem.astro";
+import ProjectItem from "@/components/ProjectItem.astro";
+
+import ProjectIcon from "@/assets/icons/ProjectIcon.astro";
 
 const PROJECTS = [
     {
@@ -39,15 +40,6 @@ const PROJECTS = [
         repo: "https://github.com/jpalma76/portafolio",
         url: "/images/porfolio-web.webp"
     },
-    {
-        title: "Portafolio 3",
-        date: "Realizado en Febrero de 2024",
-        description:
-            "Ejercicio de Portafolio creado con html, css, javascript, jquery, bootstrap",
-        link: "https://portafolio-tres.netlify.app/",
-        repo: "https://github.com/jpalma76/Portafolio3",
-        url: "/images/portafolio3.webp"
-    },
      {
         title: "Landing de la Desvelada V",
         date: "Realizado en Abril de 2025",
@@ -70,15 +62,15 @@ const PROJECTS = [
 ---
 
 <Section id="projects">
-    <h2 class="w-full px-4 flex gap-x-4 mb-3 items-center text-3xl text-left">
+    <h2 class="w-[full] px-4 flex gap-x-4 mb-3 items-center text-3xl text-left">
         <ProjectIcon class="size-7" />
         Proyectos
     </h2>
 
-    <ul class="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 my-2">
+    <ul class="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 !gap-8 !my-8">
         {
             PROJECTS.map((project) => (
-                <li class="relative mb-6 sm:mb-0">
+                <li class="w-full">
                     <ProjectItem {...project} />
                 </li>
             ))

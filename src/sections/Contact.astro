@@ -1,10 +1,10 @@
 ---
 import Section from '../components/Section.astro';
-import EmailIcon from './icons/EmailIcon.astro';
-import GmailIcon from './rrss/GmailIcon.astro';
-import LinkedInIcon from './rrss/LinkedInIcon.astro';
-import XIcon from './rrss/XIcon.astro';
-import SocialContainerContact from './SocialContainerCotact.astro';
+import LinkedInIcon from "@/assets/rrss/LinkedInIcon.astro"
+import EmailIcon from "@/assets/icons/EmailIcon.astro";
+import XIcon from '@/assets/rrss/XIcon.astro';
+import SocialContainerContact from '@/components/SocialContainerCotact.astro';
+import GmailIcon from '@/assets/rrss/GmailIcon.astro';
 
 ---
 
@@ -14,11 +14,11 @@ import SocialContainerContact from './SocialContainerCotact.astro';
         Contacto:
     </h2>
 
-    <div class="w-full mt-10 mb-3">
+    <h3 class="w-full mt-10 mb-3 text-xl">
         Si deseas contactarme puedes hacerlo a través de los  siguientes links. 
-    </div>
+    </h3>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 py-10">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 !py-10">
 
         <SocialContainerContact link="https://www.linkedin.com/in/juan-palma-alvarez/">
             <LinkedInIcon class="size-5" />
