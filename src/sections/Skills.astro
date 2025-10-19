@@ -1,0 +1,76 @@
+---
+import CodeIcon from "@/assets/icons/CodeIcon.astro";
+import Section from "@/components/Section.astro";
+
+import SkillItem from "@/components/SkillItem.astro";
+
+const skills_programmer = [
+  {
+    name: "HTML",
+    url: "/images/skills/html.webp"
+  },
+  {
+    name: "CSS",
+    url: "/images/skills/css.webp"
+  },
+  {
+    name: "JavaScript",
+    url: "/images/skills/javascript.webp"
+  },
+  {
+    name: "React",
+    url: "/images/skills/react.webp"
+  },
+  {
+    name: "AstroJS",
+    url: "/images/skills/astro.webp"
+  },
+  {
+    name: "Tailwind CSS"  ,
+    url: "/images/skills/tailwind.webp"
+  },  
+  {
+    name: "JSON",
+    url: "/images/skills/json.webp"
+  },
+  {
+    name: "SQL",
+    url: "/images/skills/sql.webp"
+  },
+  {
+    name: "MySQL",
+    url: "/images/skills/mysql.webp"
+  },
+  {
+    name: "SQLite",
+    url: "/images/skills/sqlite.webp"
+  },
+  {
+    name: "Git",
+    url: "/images/skills/git.webp"
+  },
+  {
+    name: "GitHub",
+    url: "/images/skills/github.webp"
+  },
+];
+
+---
+
+<Section id="skills">
+  <h2 class="w-full flex items-center flex-row gap-1 text-3xl !my-3">
+    <CodeIcon class="size-8" />
+    Mis Skills son:
+  </h2>
+  <h3 class="text-2xl font-semibold !my-5">Desarrollo web</h3>
+  
+  <article class="flex flex-col text-center max-w-[900px] mx-auto !my-7">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-6 text-center">
+      {
+        skills_programmer.map(skill => (
+            <SkillItem name={skill.name} url={skill.url} />
+        ))
+      }
+    </div>
+  </article>
+</Section>

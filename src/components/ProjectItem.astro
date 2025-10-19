@@ -1,4 +1,6 @@
 ---
+import GitHubProfile from '@/assets/profiles/GitHubProfile.astro';
+
 interface Props {
     title: string;
     date: string;
@@ -11,19 +13,28 @@ interface Props {
 const { title, date, description, link, repo, url } = Astro.props;
 ---
 
-<div class="card w-[260px] h-[240px] flex flex-col items-center border rounded-xl px-5 py-3 transition-all gap-5">
-    <h3 class="mx-auto h-[70px] flex items-center text-center text-base uppercase text-yellow-300/90">{title}</h3>
+<div class="card w-[270px] max-sm:w-[90%] h-[340px] flex flex-col items-center justify-start border rounded-md transition-all">
+    
+    <h3 class="mx-auto h-[70px] flex items-center justify-center text-center text-base text-balance uppercase semibold">{title}</h3>
+    
     <a 
         href={link}
         target="_blank"
-        class="w-full hover:scale-105 hover:opacity-40"
+        class="hover:scale-105 hover:opacity-40"
     >
-
-        <div class="w-full h-auto flex flex-col justify-center gap-y-5 text-center">
-            <img class="w-[99%] h-[auto] border rounded-xl object-fit" src={url} alt={title}>
+        <img class="w-[95%] h-[130px] border rounded-md !mx-auto" src={url} alt={title}>
+    </a>
+    <p class="w-[90%] flex h-[90px] justify-center items-center text-xs text-center">{description}</p>
+    <a
+        class="hover:scale-110 hover:text-yellow-600" 
+        href={repo}
+        target="_blank"
+    >
+        <div class="flex justify-center items-center gap-x-3">
+            <GitHubProfile class="size-6" />
+            <span> Ver repositorio</span>
         </div>
     </a>
-    <!-- <span class="flex h-[90px] justify-center items-center text-sm text-center text-wrap">{description}</span> -->
 </div>
 
 <style>

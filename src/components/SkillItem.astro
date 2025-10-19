@@ -1,28 +1,14 @@
 ---
 interface Props {
-    name: string;
-    url: string;
+  name: string;
+  url: string;
 }
 
 const { name, url } = Astro.props;
-const filename = `icono de ${name}`
+const filename = `icono de ${name}`;
 ---
 
-<li
-    class="badge w-[150px] h-8 flex items-center justify-center gap-4 md:gap-3 px-auto py-1 border-zinc-400 rounded-3xl"
->
-    <img src={url} alt={filename} class="size-4 p-0 object-contain" />
-    <span class="text-xs font-semibold">{name}</span>
-</li>
-
-<style>
-    .badge {
-        display: flex;
-        color: #fff;
-        background-image: linear-gradient(45deg, silver 20%, grey 60%, black 100%);
-        border: 1px solid #efe060;
-        font-size: 14px;
-        font-weight: 500;
-        gap: 8px;
-    }
-</style>
+<p class="flex justify-center items-center bg-gray-800 !gap-x-3 !px-6 !py-2 rounded-full border-[1px] border-white">
+  <img src={url} alt={filename} class="size-5" />
+  <span class="text-md font-semibold italic">{name}</span>
+</p>

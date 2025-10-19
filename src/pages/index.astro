@@ -1,25 +1,19 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import About from "../components/About.astro";
-import Footer from "../components/Footer.astro";
-import Experience from "../components/Experience.astro";
-import Projects from "../components/Projects.astro";
-import Contact from "../components/Contact.astro";
-import Skills from "../components/Skills.astro";
+import Layout from "@/layouts/Layout.astro";
+import About from "@/sections/About.astro";
+import Projects from "@/sections/Projects.astro";
+import Contact from "@/sections/Contact.astro";
+import Skills from "@/sections/Skills.astro";
+import Formation from "@/sections/Formation.astro";
 ---
 
-<Layout 
+<Layout
 	title="Juan Palma | Desarrollador Frontend especializado en Astro y React"
 	description="Soy Juan Palma, Desarrollador Frontend con experiencia en Astro, React, Tailwind y Vite. Mira mis proyectos y contáctame para colaborar."
 >
-	<Header />
-	<main>
-		<About />
-		<Projects />
-		<Experience />
-		<Skills />
-		<Contact />
-	</main>
-	<Footer />
+	<About />
+	<Projects />
+	<Formation />
+	<Skills />
+	<Contact />
 </Layout>

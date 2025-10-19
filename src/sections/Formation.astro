@@ -1,7 +1,10 @@
 ---
+
+import BriefCase from "@/assets/icons/BriefCase.astro";
 import Section from "../components/Section.astro";
-import ExpericenceItem from "./ExpericenceItem.astro";
-import BriefCase from '../components/icons/BriefCase.astro';
+import ExpericenceItem from "@/components/ExpericenceItem.astro";
+
+
 
 const EXPERIENCE = [
   {
@@ -25,20 +28,20 @@ const EXPERIENCE = [
 ];
 ---
 
-<Section id="experience">
+<Section id="formation">
     <h2 class="w-full flex items-center flex-row gap-x-2 text-3xl">
         <BriefCase class="size-7" />
         Formación
     </h2>
 
-    <ol class=" w-full mx-auto relative border-s border-gray-400 dark:border-gray-700">
+    <div class="w-full mx-auto flex flex-col border-gray-400 dark:border-gray-700 !gap-y-2 mb-3">
         {
             EXPERIENCE.map(experience => (
-            <li class="mb-10 ms-4">
+            <p>
                 <ExpericenceItem { ...experience } />
-            </li>
+            </p>
         ))
         }
         
-    </ol>
+    </div>
 </Section>
