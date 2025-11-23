@@ -15,8 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:
-      "IBM Plex Mono", "Courier New", Courier, monospace, system-ui, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
   }
   body {
     display: flex;
@@ -25,10 +24,9 @@
     background: var(--bg-dark);
     color: var(--font-dark);
     width: 100%;
-    min-height: 100vh;
-
+    min-height: 100dvh;
   }
 
   img {
-    aspect-ratio: auto;
+    aspect-ratio: 1/1;
   }
