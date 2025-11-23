@@ -8,7 +8,7 @@ const { name, url } = Astro.props;
 const filename = `icono de ${name}`;
 ---
 
-<p class="w-[170px] flex justify-center items-center bg-gray-800 rounded-full border border-white gap-3 !py-1">
+<p class="w-[155px] flex justify-center items-center bg-gray-800 rounded-full border border-white gap-3 !py-1">
   <img src={url} alt={filename} class="size-4" />
-  <span class="text-sm font-semibold italic">{name}</span>
+  <span class="text-sm xs:text-[12px] font-semibold italic">{name}</span>
 </p>

@@ -13,7 +13,7 @@ interface Props {
 const { title, date, description, link, repo, url } = Astro.props;
 ---
 
-<div class="w-[370px] h-[400px] card border rounded-xl mx-auto flex flex-col justify-center items-center">
+<div class="card-project w-[370px] h-[400px] card border rounded-xl mx-auto flex flex-col justify-center items-center">
     
     <h3 class="mx-auto text-balance flex items-center justify-center text-center text-base uppercase semibold !py-3">{title}</h3>
     
@@ -36,3 +36,12 @@ const { title, date, description, link, repo, url } = Astro.props;
         </div>
     </a>
 </div>
+<style>
+    @media(max-width:400px) {
+        
+        .card-project {
+            height: auto;
+        }
+    }
+
+</style>
