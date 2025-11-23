@@ -13,20 +13,20 @@ interface Props {
 const { title, date, description, link, repo, url } = Astro.props;
 ---
 
-<div class="card w-full md:w-[270px] max-sm:w-[90%] h-[360px] md:h-[340px] flex flex-col items-center justify-start border rounded-md transition-all">
+<div class="w-[370px] h-[400px] card border rounded-xl mx-auto flex flex-col justify-center items-center">
     
-    <h3 class="mx-auto h-[70px] flex items-center justify-center text-center text-base text-balance uppercase semibold">{title}</h3>
+    <h3 class="mx-auto text-balance flex items-center justify-center text-center text-base uppercase semibold !py-3">{title}</h3>
     
     <a 
         href={link}
         target="_blank"
-        class="hover:scale-105 hover:opacity-40"
+        class="hover:scale-105 hover:opacity-70"
     >
-        <img class="w-[95%] md:w-[254px] h-auto md:h-[135px] border rounded-md !mx-auto" src={url} alt={title}>
+        <img class="w-[300px] h-[170px] border rounded-md" src={url} alt={title}>
     </a>
     <p class="w-[90%] flex h-[90px] justify-center items-center text-xs text-center">{description}</p>
     <a
-        class="hover:scale-110 hover:text-yellow-600" 
+        class="hover:scale-105 hover:text-yellow-600/70" 
         href={repo}
         target="_blank"
     >
@@ -36,14 +36,3 @@ const { title, date, description, link, repo, url } = Astro.props;
         </div>
     </a>
 </div>
-
-<style>
-    @media (max-width:600px) {
-        .card {
-            width:350px;
-            height: auto;
-            margin: 0 auto;
-            transition: .3s;
-        }
-    }
-</style>
